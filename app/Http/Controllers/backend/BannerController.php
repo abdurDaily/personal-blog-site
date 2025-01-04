@@ -45,6 +45,8 @@ class BannerController extends Controller
     // UPDATE STATUS 
     public function bannerStatusUpdate(Request $request)
     {
+
+        // dd($request->id);
         try {
             $banner = Banner::find($request->id);
             $banner->status = !$banner->status;
